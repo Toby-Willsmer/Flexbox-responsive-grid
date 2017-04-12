@@ -433,8 +433,8 @@ ul.grid--wide {
 
 /* line 10, ../scss/_flexbox.scss */
 
-[class^="grid"] *,
-.flex * {
+[class^="grid"] *:not(.grid--gutter),
+.flex *:not(.grid--gutter) {
   max-width: 100%;
 }
 
