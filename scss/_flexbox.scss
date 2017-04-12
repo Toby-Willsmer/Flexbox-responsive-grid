@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap; // needed to make sure we get cross browser consistancy
   position: relative;
-  & * { // this is specifically for IE10 not doing the wrapping of content
+  & *:not(.grid--gutter) { // this is specifically for IE10 not doing the wrapping of content
     max-width: $hundred;
   }
 }
