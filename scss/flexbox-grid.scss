@@ -1,0 +1,11 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// base settings
+@import "base-settings/normalize",
+        "base-settings/base-global";
+
+// the grid and flexbox
+@import "demo-styles",
+        "grid",
+        "flexbox";

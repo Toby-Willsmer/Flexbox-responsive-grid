@@ -1,0 +1,500 @@
+/* line 12, ../scss/base-settings/_normalize.scss */
+
+article,
+aside,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* line 16, ../scss/base-settings/_normalize.scss */
+
+script {
+  display: none !important;
+}
+
+/* line 22, ../scss/base-settings/_normalize.scss */
+
+strong {
+  font-weight: bold;
+}
+
+/* line 27, ../scss/base-settings/_normalize.scss */
+
+small {
+  font-size: 75%;
+}
+
+/* line 31, ../scss/base-settings/_normalize.scss */
+
+img {
+  border: 0;
+}
+
+/* line 34, ../scss/base-settings/_normalize.scss */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 38, ../scss/base-settings/_normalize.scss */
+
+figure {
+  margin: 0;
+}
+
+/* line 43, ../scss/base-settings/_normalize.scss */
+
+legend {
+  border: 0;
+}
+
+/* line 53, ../scss/base-settings/_normalize.scss */
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 63, ../scss/base-settings/_normalize.scss */
+
+button {
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 71, ../scss/base-settings/_normalize.scss */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 78, ../scss/base-settings/_normalize.scss */
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 3, ../scss/base-settings/_base-global.scss */
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, ../scss/base-settings/_base-global.scss */
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* line 13, ../scss/base-settings/_base-global.scss */
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 1.6rem;
+  color: #000;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* line 24, ../scss/base-settings/_base-global.scss */
+
+h1,
+p,
+ul {
+  margin: 0 0 1em 0;
+  word-break: break-word;
+}
+
+/* line 29, ../scss/base-settings/_base-global.scss */
+
+ul {
+  padding-left: 1em;
+}
+
+/* line 2, ../scss/_demo-styles.scss */
+
+.demo-height {
+  height: 200px;
+}
+
+/* line 3, ../scss/_demo-styles.scss */
+
+.demo-content {
+  padding: 1em;
+}
+
+/* line 4, ../scss/_demo-styles.scss */
+
+.demo-margin {
+  margin-bottom: 1em;
+}
+
+/* line 6, ../scss/_demo-styles.scss */
+
+.demo-bg {
+  background: #ccc;
+}
+
+/* line 7, ../scss/_demo-styles.scss */
+
+.demo-bg-2 {
+  background: #e4dede;
+}
+
+/* line 8, ../scss/_demo-styles.scss */
+
+.demo-blue-1 {
+  background: #c2dbe0;
+}
+
+/* line 9, ../scss/_demo-styles.scss */
+
+.demo-blue-2 {
+  background: #b2c9ce;
+}
+
+/* line 10, ../scss/_demo-styles.scss */
+
+.demo-blue-3 {
+  background: #a0b6bb;
+}
+
+/* line 11, ../scss/_demo-styles.scss */
+
+.demo-blue-4 {
+  background: #8ba5ab;
+}
+
+/* line 21, ../scss/_grid.scss */
+
+.grid {
+  width: 100%;
+  list-style: none;
+}
+
+/* line 24, ../scss/_grid.scss */
+
+.grid * :last-child {
+  margin-bottom: 0;
+}
+
+/* line 30, ../scss/_grid.scss */
+
+.grid__col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* line 36, ../scss/_grid.scss */
+
+.grid--gutter {
+  max-width: 1300px;
+  padding-left: 1em;
+  margin: 0 auto 0;
+}
+
+/* line 40, ../scss/_grid.scss */
+
+.grid--gutter > .grid__col {
+  margin: 0 1em 1em 0;
+}
+
+/* line 50, ../scss/_grid.scss */
+
+.grid--wide > .grid--gutter {
+  margin-top: 1em;
+}
+
+/* line 58, ../scss/_grid.scss */
+
+.grid--gutter > .grid__col .grid,
+.grid--wide .grid {
+  padding-top: 1em;
+}
+
+/* line 60, ../scss/_grid.scss */
+
+.grid--gutter > .grid__col .grid:not(.grid--gutter),
+.grid--wide .grid:not(.grid--gutter) {
+  padding-top: 0;
+}
+
+/* line 66, ../scss/_grid.scss */
+
+ul.grid--wide {
+  padding-left: 0;
+}
+
+@media screen and (min-width: 0) and (max-width: 700px) {
+  /* line 89, ../scss/_grid.scss */
+
+  .g-S1 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  /* line 90, ../scss/_grid.scss */
+
+  .g-S2 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  /* line 91, ../scss/_grid.scss */
+
+  .g-S3 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+
+  /* line 94, ../scss/_grid.scss */
+
+  .grid--gutter.g-S1 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% - 1em);
+    -ms-flex: 0 0 calc(100% - 1em);
+    flex: 0 0 calc(100% - 1em);
+  }
+
+  /* line 95, ../scss/_grid.scss */
+
+  .grid--gutter.g-S2 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 2 - 1em);
+    -ms-flex: 0 0 calc(100% / 2 - 1em);
+    flex: 0 0 calc(100% / 2 - 1em);
+  }
+
+  /* line 96, ../scss/_grid.scss */
+
+  .grid--gutter.g-S3 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 3 - 1em);
+    -ms-flex: 0 0 calc(100% / 3 - 1em);
+    flex: 0 0 calc(100% / 3 - 1em);
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+  /* line 102, ../scss/_grid.scss */
+
+  .g-M2 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  /* line 103, ../scss/_grid.scss */
+
+  .g-M3 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+
+  /* line 104, ../scss/_grid.scss */
+
+  .g-M4 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+
+  /* line 107, ../scss/_grid.scss */
+
+  .grid--gutter.g-M2 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 2 - 1em);
+    -ms-flex: 0 0 calc(100% / 2 - 1em);
+    flex: 0 0 calc(100% / 2 - 1em);
+  }
+
+  /* line 108, ../scss/_grid.scss */
+
+  .grid--gutter.g-M3 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 3 - 1em);
+    -ms-flex: 0 0 calc(100% / 3 - 1em);
+    flex: 0 0 calc(100% / 3 - 1em);
+  }
+
+  /* line 109, ../scss/_grid.scss */
+
+  .grid--gutter.g-M4 > .grid__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 4 - 1em);
+    -ms-flex: 0 0 calc(100% / 4 - 1em);
+    flex: 0 0 calc(100% / 4 - 1em);
+  }
+}
+
+@media screen and (min-width: 701px) {
+  /* line 134, ../scss/_grid.scss */
+
+  .grid__col--1of2 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  /* line 135, ../scss/_grid.scss */
+
+  .grid__col--1of3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+
+  /* line 136, ../scss/_grid.scss */
+
+  .grid__col--1of4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+
+  /* line 139, ../scss/_grid.scss */
+
+  .grid--gutter .grid__col--1of2 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 2 - 1em);
+    -ms-flex: 0 0 calc(100% / 2 - 1em);
+    flex: 0 0 calc(100% / 2 - 1em);
+  }
+
+  /* line 140, ../scss/_grid.scss */
+
+  .grid--gutter .grid__col--1of3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 3 - 1em);
+    -ms-flex: 0 0 calc(100% / 3 - 1em);
+    flex: 0 0 calc(100% / 3 - 1em);
+  }
+
+  /* line 141, ../scss/_grid.scss */
+
+  .grid--gutter .grid__col--1of4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 -webkit-calc(100% / 4 - 1em);
+    -ms-flex: 0 0 calc(100% / 4 - 1em);
+    flex: 0 0 calc(100% / 4 - 1em);
+  }
+}
+
+/* line 6, ../scss/_flexbox.scss */
+
+[class^="grid"],
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* line 10, ../scss/_flexbox.scss */
+
+[class^="grid"] *,
+.flex * {
+  max-width: 100%;
+}
+
+/* line 21, ../scss/_flexbox.scss */
+
+.align-top {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+/* line 25, ../scss/_flexbox.scss */
+
+.align-bottom {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+/* line 29, ../scss/_flexbox.scss */
+
+.align-vert {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 31, ../scss/_flexbox.scss */
+
+.align-vert.align-center {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+/* line 36, ../scss/_flexbox.scss */
+
+.align-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+/* line 40, ../scss/_flexbox.scss */
+
+.align-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 52, ../scss/_flexbox.scss */
+
+.align-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}

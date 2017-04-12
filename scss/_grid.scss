@@ -1,0 +1,143 @@
+// Grid
+
+// As there is a max-width delcared for the restricted site width
+// we use margin to center .grid as we don't want a main flex wrapper for centering.
+// We do this so that we can have resticted and full width grids anywhwere on the page
+// without the need of hacks to make the full width one.
+
+// Variables global
+$hundred: 100%;
+$site-width: 1300px; // the default width for the site
+
+// Variables grid specific
+$grid-gutter: 1em;
+
+// add the flex. We want it to be on the cols as well as the container so done this way.
+[class^="grid"] {
+  @extend %flex; // This extend is in the _flexbox.scss file
+}
+
+// the main grid settings
+.grid {
+  width: $hundred; 
+  list-style: none; // for when a list is a grid
+  * :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// set the columns
+.grid__col {
+  flex: 1;
+}
+
+// add some gutters to the grid and cater for nested grids
+// the grid with gutters is the width restricted one
+.grid--gutter {
+  max-width: $site-width;
+  padding-left: $grid-gutter;
+  margin: 0 auto 0; // we declare the bottom as zero here to cater for when .grid is on a ul
+  > .grid__col {
+    margin: 0 $grid-gutter $grid-gutter 0;
+    .grid {
+      @extend %nested-grid;
+    }
+  }
+}
+
+// make the grid full width and cater for any nested grid when wide
+.grid--wide {
+  > .grid--gutter {
+    margin-top: $grid-gutter;
+  }
+  .grid {
+    @extend %nested-grid;
+  }
+}
+
+%nested-grid {
+  padding-top: $grid-gutter;
+  &:not(.grid--gutter) {
+    padding-top: 0;
+  }
+}
+
+// clear the list default when a wide grid is used
+ul.grid--wide {
+  padding-left: 0
+}
+
+// Grid widths
+// We do all 12 but we don't neccassarly have to use them!
+// Number denotes the amount across NOT the grid value.
+// These are for when we have a grid with a gutter.
+$w-1:   calc(#{$hundred} - #{$grid-gutter});
+$w-2:   calc(#{$hundred} / 2 - #{$grid-gutter});
+$w-3:   calc(#{$hundred} / 3 - #{$grid-gutter});
+$w-4:   calc(#{$hundred} / 4 - #{$grid-gutter});
+$w-5:   calc(#{$hundred} / 5 - #{$grid-gutter});
+$w-6:   calc(#{$hundred} / 6 - #{$grid-gutter});
+$w-7:   calc(#{$hundred} / 7 - #{$grid-gutter});
+$w-8:   calc(#{$hundred} / 8 - #{$grid-gutter});
+$w-9:   calc(#{$hundred} / 9 - #{$grid-gutter});
+$w-10:  calc(#{$hundred} / 10 - #{$grid-gutter});
+$w-11:  calc(#{$hundred} / 11 - #{$grid-gutter});
+$w-12:  calc(#{$hundred} / 12 - #{$grid-gutter});
+
+// Small
+@media screen and (min-width: 0) and (max-width: 700px) {
+  .g-S1 > .grid__col { flex: 0 0 $hundred; }
+  .g-S2 > .grid__col { flex: 0 0 $hundred/2; }
+  .g-S3 > .grid__col { flex: 0 0 $hundred/3; }
+
+  .grid--gutter {
+    &.g-S1 > .grid__col { flex: 0 0 $w-1; }
+    &.g-S2 > .grid__col { flex: 0 0 $w-2; }
+    &.g-S3 > .grid__col { flex: 0 0 $w-3; }    
+  }
+}
+
+// Medium
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+  .g-M2 > .grid__col { flex: 0 0 $hundred/2; }
+  .g-M3 > .grid__col { flex: 0 0 $hundred/3; }
+  .g-M4 > .grid__col { flex: 0 0 $hundred/4; }
+
+  .grid--gutter {
+    &.g-M2 > .grid__col { flex: 0 0 $w-2; }
+    &.g-M3 > .grid__col { flex: 0 0 $w-3; }
+    &.g-M4 > .grid__col { flex: 0 0 $w-4; }
+  }
+}
+
+// Large
+// The default is flex: 1; for grid__col so you don't actually need to specify these classes 
+// unless you want to restrict the width of a cell
+// commented out as not used so far. Use at will if needed
+// @media screen and (min-width: 1024px) {
+//   .g-L2 > .grid__col { flex: 0 0 $hundred/2; }
+//   .g-L3 > .grid__col { flex: 0 0 $hundred/3; }
+//   .g-L4 > .grid__col { flex: 0 0 $hundred/4; }
+//   .g-L6 > .grid__col { flex: 0 0 $hundred/6; }
+
+//   .grid--gutter {
+//     &.g-L2 > .grid__col { flex: 0 0 $w-2; }
+//     &.g-L3 > .grid__col { flex: 0 0 $w-3; }
+//     &.g-L4 > .grid__col { flex: 0 0 $w-4; }
+//     &.g-L6 > .grid__col { flex: 0 0 $w-6; }
+//   } 
+// }
+
+// For the individual sizes
+// we only do thirds, quarters and halves as they are the most common sizes used
+@media screen and (min-width: 701px) {
+  .grid__col--1of2 { flex: 0 0 $hundred/2; }
+  .grid__col--1of3 { flex: 0 0 $hundred/3; }
+  .grid__col--1of4 { flex: 0 0 $hundred/4; }
+
+  .grid--gutter {
+    .grid__col--1of2 { flex: 0 0 $w-2; }
+    .grid__col--1of3 { flex: 0 0 $w-3; }
+    .grid__col--1of4 { flex: 0 0 $w-4; }
+  }
+}

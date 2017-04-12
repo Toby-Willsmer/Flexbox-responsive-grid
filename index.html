@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Toby Willsmer"/>
+    <title>Flexbox model and grid</title>
+    <link rel="stylesheet" href="css/flexbox-grid.css" />
+  </head>
+  <body>
+    <header>
+
+      <!-- Line breaks are only used in this file to visually sperate each part -->
+
+      <div class="grid grid--wide align-center demo-bg demo-margin">
+        <div class="grid__col">
+          <div class="grid grid--gutter">
+            <div class="grid__col align-col">
+              <h1>Flexbox responsive grids</h1>
+              <p>A responsive grid model using flexbox. There two variations for this grid:</p>
+              <ul>
+                <li>Width restricted grid</li>
+                <li>Full width grid</li>
+              </ul>
+              <p>Plus flexbox alignment for the grid contents</p>
+              <p>I added a flexbox only model at the bottom which can be used outside the grid with the same alignment classes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <main>
+
+      <!-- Full width grid -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col">
+          <h2>Full width grid with no gutters</h2>
+        </div>
+      </div>
+
+      <div class="grid grid--wide g-S1 demo-margin">
+        <div class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-blue-3">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restricted width default centered grid -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col">
+          <h2>Restricted width grid with gutters</h2>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equal width grid -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col">
+          <h2>Equal width grid</h2>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Full width - No specified grid sizes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>2 across - No specified grid sizes</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>2 across - No specified grid sizes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1 g-M2">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1 g-M2">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1 g-M2">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1 g-M3">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S2 g-M4">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Individual widths -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Individual widths</h2>
+          <p>The cells that have <code>auto</code> in them are the default flex width. The individual widths have classes added to the <code>grid__col</code> child</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1">
+        <div class="grid__col grid__col--1of2 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of2</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col grid__col--1of3 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter g-S1">
+        <div class="grid__col grid__col--1of4 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of4</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col grid__col--1of3 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restricted width grid with nested grids -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Nested grids</h2>
+          <p>Restricted width grid with nested grids</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col demo-bg">
+          <!-- Nested grid -->
+          <div class="grid g-S1">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-3">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col demo-bg">
+          <!-- Nested grid -->
+          <div class="grid grid--gutter g-S1">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-1">
+              <!-- Nested grid -->
+              <div class="grid grid--gutter">
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+              </div><!-- Close nested grid -->
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+
+      <!-- Full width grid with nested grids -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col">
+          <p>Full width grid with nested grids</p>
+        </div>
+      </div>
+
+      <div class="grid grid--wide g-S1">
+        <div class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>Full width grid no gutters<br/>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-blue-2">
+          <!-- Nested grid -->
+          <div class="grid g-S1 g-M2">
+            <div class="grid__col demo-bg">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-bg-2">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-bg">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+
+      <div class="grid grid--wide g-S1 demo-margin">
+        <div class="grid__col demo-blue-3">
+          <!-- Nested grid -->
+          <div class="grid grid--gutter g-S1 g-M2">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-1">
+              <!-- Nested grid -->
+              <div class="grid grid--gutter">
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+              </div><!-- Close nested grid -->
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+
+      <!-- List as grid -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>List as grid</h2>
+          <p>List as a restricted width grid</p>
+        </div>
+      </div>
+
+      <ul class="grid grid--gutter g-S1">
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <p>List as a full width grid</p>
+        </div>
+      </div>
+
+      <ul class="grid grid--wide g-S1">
+        <li class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Grid with alignments -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Grid with alignments</h2>
+          <p>Vertical aligment class <code>align-vert</code> added to the parent <code>grid</code> container.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter align-vert">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Vertical align</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop.
+            </p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop. Ribeye strip steak pork filet mignon, hamburger turducken shoulder jerky corned beef.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top - Center - Bottom alignment -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Top - Center - Bottom align</h2>
+          <p>Alignment classes <code>align-top, align-vert &amp; align-bottom</code> added to the child <code>grid__col</code> container.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter demo-height">
+        <div class="grid__col align-bottom">
+          <div class="demo-content demo-bg">
+            <p>Bottom align</p>
+          </div>
+        </div>
+        <div class="grid__col align-vert">
+          <div class="demo-content demo-bg">
+            <p>Vertical align</p>
+          </div>
+        </div>
+        <div class="grid__col align-top">
+          <div class="demo-content demo-bg">
+            <p>Top align</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content alignment - Left - Center - Right - Vertical alignment -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Content alignment, Left - Center - Right - Vertical align</h2>
+          <p>Alignment classes added to the child <code>grid__col</code> containers.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Left align (Default)</p>
+          </div>
+        </div>
+        <div class="grid__col align-center demo-bg">
+          <div class="demo-content">
+            <p>Center align</p>
+          </div>
+        </div>
+        <div class="grid__col align-right demo-bg">
+          <div class="demo-content">
+            <p>Right align</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-vert demo-bg demo-height">
+          <div class="demo-content">
+            <p>Align vert on child</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-vert align-center demo-bg demo-height">
+          <div class="demo-content">
+            <p>Align vert &amp; center on child</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flex model -->
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+          <h2>Flex model</h2>
+          <p>This flexbox model uses the same alignment classes as the grid. The wrapper for the content has the <code>flex</code> class</p>
+        </div>
+      </div>
+
+      <div class="grid grid--gutter">
+        <div class="grid__col align-col">
+
+          <div class="flex">
+            <p class="demo-content demo-bg">Left align (Default)</p>
+          </div>
+
+          <div class="flex align-center">
+            <p class="demo-content demo-bg">Center align</p>
+          </div>
+
+          <div class="flex align-right demo-margin">
+            <p class="demo-content demo-bg">Right align</p>
+          </div>
+
+          <div class="flex align-vert demo-bg demo-content demo-height demo-margin">
+            <p>Align vert on parent</p>
+          </div>
+
+          <div class="flex align-center align-vert demo-bg demo-content demo-height demo-margin">
+            <p>Align center and align vert on parent</p>
+          </div>
+
+          <div class="flex align-col demo-bg demo-content demo-margin">
+            <p>Align columns on parent</p>
+            <p>Align columns on parent</p>
+          </div>
+
+          <div class="flex demo-margin">
+            <div class="demo-content demo-bg align-top">
+              <p>Align top on child</p>
+            </div>
+            <div class="demo-content demo-bg" style="max-width:200px"><!-- Inline style only for example purposes -->
+              <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop. Ribvye strip.</p>
+            </div>
+            <div class="align-bottom demo-content demo-bg">
+              <p>Align bottom on child</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+    <footer class="demo-bg">
+
+      <div class="grid grid--gutter">
+        <div class="grid__col">
+          <p>Footer content</p>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
